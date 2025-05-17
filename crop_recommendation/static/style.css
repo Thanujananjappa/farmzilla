@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* White background */
+    background-image: url('https://images.unsplash.com/photo-1560917883-08c43a32efb7?auto=format&fit=crop&w=1500&q=80'); /* Gorgeous grass background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #333;
+}
+
+/* Glass effect overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay */
+    backdrop-filter: blur(6px); /* Blur effect */
+    z-index: 0;
+}
+
+/* Stylish form container */
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* Slight white transparency */
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 255, 0, 0.15);
+    width: 420px;
+    text-align: center;
+    border: 2px solid #4CAF50; /* Green border */
+}
+
+/* Heading with a cool vibe */
+h1 {
+    color: #4CAF50; /* Green heading */
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #4CAF50;
+}
+
+/* Inputs with a futuristic look */
+form input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    background: #fafafa; /* Light grey input */
+    border: 1px solid #4CAF50;
+    border-radius: 12px;
+    color: #333;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #4CAF50; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #388e3c; /* Darker green */
+    color: white;
+    box-shadow: 0 0 15px #4CAF50;
+}
