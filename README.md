@@ -4,7 +4,7 @@ A multilingual Smart Agriculture web application that empowers farmers with crop
 
 ---
 🔗 Live Demo
-🌐 Check it out live: [https://your-vercel-link.vercel.app](https://farmzilla.vercel.app/)
+🌐 Check it out live: https://farmzilla.vercel.app/
 
 ## 🧰 Tech Stack
 
