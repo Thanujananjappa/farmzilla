@@ -3,6 +3,8 @@
 A multilingual Smart Agriculture web application that empowers farmers with crop insights, disease detection, AI chatbot support, fertilizer advice, government schemes, and much more.
 
 ---
+🔗 Live Demo
+🌐 Check it out live: https://your-vercel-link.vercel.app
 
 ## 🧰 Tech Stack
 
