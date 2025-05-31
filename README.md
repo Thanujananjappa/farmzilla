@@ -1,206 +1,246 @@
-# 🌾 Smart Agri Farming App
+# Smart Agriculture System 🌱
 
-A multilingual Smart Agriculture web application that empowers farmers with crop insights, disease detection, AI chatbot support, fertilizer advice, government schemes, and much more.
+A comprehensive smart agriculture solution that combines plant disease detection, fertilizer recommendations, and an AI-powered chatbot to assist farmers.
 
----
-🔗 Live Demo
-🌐 Check it out live: https://farmzilla.vercel.app/
+## 📸 Screenshots
 
-## 🧰 Tech Stack
+### Main Dashboard
+![Dashboard](screenshots/dashboard.png)
+Main dashboard showing all available features
 
-### 👨‍🌾 Frontend
-- React + TypeScript
-- Tailwind CSS
+### Plant Disease Detection
+![Plant Disease](screenshots/plant-disease.png)
+Upload and analyze plant images for disease detection
+
+### Fertilizer Recommendation
+![Fertilizer](screenshots/fertilizer.png)
+Get personalized fertilizer recommendations
+
+### AI Chatbot
+![Chatbot](screenshots/chatbot.png)
+Interactive AI-powered farming assistant
+
+## 🌟 Features
+
+- *Plant Disease Detection*: Identify plant diseases using advanced image recognition
+- *Fertilizer Recommendation*: Get personalized fertilizer suggestions based on crop type, soil type, and NPK values
+- *AI Chatbot Assistant*: Interactive chatbot powered by TinyLlama to answer farming-related queries
+- *Modern UI*: Responsive and user-friendly interface built with React and Tailwind CSS
+
+## 🛠 Tech Stack
+
+### Frontend
+- React
+- TypeScript
 - Vite
-- `react-i18next` for localization
+- Tailwind CSS
+- Axios for API calls
 
-### ⚙️ Backend
-- Flask (Python): Disease detection, crop recommendation, chatbot
-- Node.js + Express: API gateway / additional routes
-- Ollama: LLM-based chatbot (local model like LLaMA 3)
+### Backend Services
+- *Main Backend*: Node.js with Express
+- *Chatbot Backend*: Node.js with TinyLlama integration
+- *Plant Disease Recognition*: Python with ML models
 
----
+## 🚀 Getting Started
 
-## 📁 Project Structure
+### Prerequisites
+- Node.js (v14 or higher)
+- Python 3.9
+- Git
 
-smart-agri-farming/
-├── backend/ # Node + Express server (API gateway or extra logic)
-├── chatbot-backend/ # Flask chatbot with Ollama integration
-├── crop_recommendation/ # Flask crop recommendation service
-├── smartfarm-backend/ # Flask disease detection model
-├── src/ # React frontend app
-│ ├── locales/ # i18n translation files
-│ ├── components/ # All UI components
-│ └── ...
-├── public/
-├── .env # Environment variables
-├── index.html
-├── index.tsx
-├── package.json
-├── vite.config.ts
+### Installation
 
-yaml
-Copy
-Edit
+1. *Clone the repository*
+   bash
+   git clone https://github.com/yourusername/smart-agriculture.git
+   cd smart-agriculture
+   
 
----
+2. *Frontend Setup*
+   bash
+   cd frontend
+   npm install
+   npm run dev
+   
 
-## 🌍 Features
+3. *Backend Setup*
+   bash
+   cd backend
+   npm install
+   npm start
+   
 
-- 🗣️ **Multilingual Support** (English, Hindi, Kannada, Tamil, Telugu, Malayalam)
-- 🌱 **Crop Recommendation** using soil type and region
-- 🦠 **Plant Disease Detection** via image upload (TensorFlow model)
-- 🤖 **Chatbot with Ollama LLM**
-- 🧪 **Fertilizer Suggestions** for crop-soil combos
-- 📈 **Crop Demand Forecast** for local markets
-- 💸 **Government Schemes & Loans** information
-- 🧑‍🌾 Simple, farmer-friendly UI
+4. *Chatbot Backend Setup*
+   bash
+   cd chatbot-backend/smart-agri-backend
+   npm install
+   npm start
+   
 
----
+5. *Plant Disease Recognition Setup*
+   bash
+   cd Plant-Disease-Recognition-System
+   pip install -r requirements.txt
+   python app.py
+   
 
-## 🚀 Setup Instructions
+### Environment Variables
 
-### 1. Clone the Repository
+Create .env files in respective directories:
 
-```bash
-git clone https://github.com/yourusername/smart-agri-farming.git
-cd smart-agri-farming
-🌐 Frontend Setup (React + Vite)
-bash
-Copy
-Edit
-# Install dependencies
-npm install
+*Frontend (.env)*
 
-# Start the dev server
-npm run dev
-Make sure you have a .env file in the root:
-
-env
-Copy
-Edit
-VITE_CHATBOT_API_URL=http://localhost:5002
-VITE_CROP_RECOMMENDATION_API=http://localhost:5001
-VITE_DISEASE_API=http://localhost:5000
-🧠 Chatbot Backend (Flask + Ollama)
-Prerequisites
-Python 3.8+
-
-Ollama installed from https://ollama.com/
-
-Setup
-bash
-Copy
-Edit
-cd chatbot-backend
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
-
-# Run Ollama model locally (e.g., llama3)
-ollama run llama3
-
-# Start Flask server
-python app.py  # Runs on http://localhost:5002
-🌾 Crop Recommendation Backend (Flask)
-bash
-Copy
-Edit
-cd crop_recommendation
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py  # Runs on http://localhost:5001
-🧬 Disease Detection Backend (Flask + TensorFlow)
-bash
-Copy
-Edit
-cd smartfarm-backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py  # Runs on http://localhost:5000
-🌐 Node + Express Backend (Optional)
-bash
-Copy
-Edit
-cd backend
-npm install
-node index.js  # Customize your port or middleware if needed
-🌍 Multilingual Setup
-react-i18next is used for localization.
-
-Supported Languages
-English
-
-Hindi
-
-Kannada
-
-Tamil
-
-Telugu
-
-Malayalam
-
-Switch Languages
-In the UI, use language buttons or a dropdown. Translations are stored in:
-
-pgsql
-Copy
-Edit
-src/locales/
-  ├── en.json
-  ├── hi.json
-  ├── kn.json
-  ├── ta.json
-  ├── te.json
-  └── ml.json
-🧪 Image Upload – Disease Detection
-Upload a plant leaf photo → the TensorFlow model predicts the disease.
-
-API: http://localhost:5000/predict
-
-🤖 Chatbot with Ollama
-Local LLMs (e.g., LLaMA3, Mistral) are run via Ollama.
-
-Questions can be asked in regional languages.
-
-Translations handled via frontend and processed by Ollama.
-
-📊 Crop Demand Forecast
-On the "Market" page:
-
-Uses local crop trends to suggest what to plant next season.
-
-Mock data or future ML integration planned.
-
-📋 To Do / Enhancements
- Add real-time weather integration
-
- Vector DB for smarter chatbot memory
-
- Firebase or Supabase for auth & user data
-
- Offline access (PWA mode)
-
-🧠 Acknowledgements
-Ollama
-
-TensorFlow
-
-react-i18next
-
-Indian Government Agri Schemes
-
-📜 License
-MIT License © 2025 Thanuja
-
-🙋‍♀️ Author
-Thanuja
-Smart Agri Farming Developer
+VITE_API_URL=http://localhost:5000
+VITE_CHATBOT_URL=http://localhost:5001
+VITE_PLANT_DISEASE_URL=http://localhost:5002
 
 
+*Backend (.env)*
+
+PORT=5000
+FRONTEND_URL=http://localhost:5173
 
 
+*Chatbot Backend (.env)*
 
+PORT=5001
+FRONTEND_URL=http://localhost:5173
+
+
+## 📱 Usage
+
+1. *Plant Disease Detection*
+   - Navigate to the Plant Disease page
+   - Upload an image of the plant
+   - Get instant disease detection results
+
+2. *Fertilizer Recommendation*
+   - Select crop type
+   - Enter soil type
+   - Input NPK values
+   - Get personalized fertilizer recommendations
+
+3. *AI Chatbot*
+   - Click on the chat icon
+   - Ask any farming-related questions
+   - Get instant AI-powered responses
+
+## 🌐 Deployment
+
+The project is deployed on:
+- Frontend: Vercel
+- Backend Services: Render
+
+### Deployment URLs
+- Frontend: https://smart-agri-farming-rbrw.vercel.app/
+- Backend: https://smart-agri-backend.onrender.com
+- Chatbot: https://smart-agri-chatbot.onrender.com
+- Plant Disease: https://smart-agri-plant-disease.onrender.com
+
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Pavithra Revankar - Initial work
+
+## 🙏 Acknowledgments
+
+- TinyLlama for the chatbot capabilities
+- Plant disease detection model contributors
+- All open-source libraries used in this project
+
+
+## 🔄 Updates
+
+- Latest update: March 2024
+- Added new features:
+  - TinyLlama integration for improved chatbot responses
+  - Enhanced plant disease detection accuracy
+  - Mobile-responsive UI improvements
+- Fixed bugs:
+  - CORS issues in backend services
+  - Image upload optimization
+  - Chatbot response latency
+
+
+## 📚 API Documentation
+
+### Backend API Endpoints
+
+#### Fertilizer Recommendation
+http
+POST /api/recommend-fertilizer
+Content-Type: application/json
+
+{
+  "cropType": "string",
+  "soilType": "string",
+  "nitrogen": number,
+  "phosphorus": number,
+  "potassium": number
+}
+
+
+Response:
+json
+{
+  "fertilizer": "string"
+}
+
+
+#### Plant Disease Detection
+http
+POST /api/detect-disease
+Content-Type: multipart/form-data
+
+file: image
+
+
+Response:
+json
+{
+  "disease": "string",
+  "confidence": number,
+  "recommendations": ["string"]
+}
+
+
+#### Chatbot
+http
+POST /api/chat
+Content-Type: application/json
+
+{
+  "message": "string"
+}
+
+
+Response:
+json
+{
+  "response": "string"
+}
+
+
+## 🗺 Project Roadmap
+
+### Phase 1 - Current Features ✅
+- [x] Plant disease detection
+- [x] Fertilizer recommendations
+- [x] AI chatbot integration
+- [x] Basic user interface
+
+### Phase 2 - Coming Soon 🚀
+- [ ] Weather integration
+- [ ] Crop yield prediction
+- [ ] Soil moisture monitoring
+- [ ] Mobile app development
+
+### Phase 3 - Future Enhancements 🔮
+- [ ] IoT device integration
+- [ ] Advanced analytics dashboard
+- [ ] Multi-language support
+- [ ] Offline mode
