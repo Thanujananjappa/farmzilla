@@ -1,4 +1,3 @@
-![dashboard](https://github.com/user-attachments/assets/c068fa6a-9bf2-4564-8c2a-e5bbdcd26923)
 
 # Smart Agriculture System 🌱
 
