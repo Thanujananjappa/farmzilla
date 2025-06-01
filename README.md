@@ -8,20 +8,20 @@ A comprehensive smart agriculture solution that combines plant disease detection
 ## 📸 Screenshots
 
 ### Main Dashboard
-![Dashboard]("./assets/dashboard.png)")
+![Dashboard](./assets/dashboard.png)
 
 Main dashboard showing all available features
 
 ### Plant Disease Detection
-![Plant Disease](screenshots/plant-disease.png)
+![Plant Disease](./assets/disease.png)
 Upload and analyze plant images for disease detection
 
 ### Fertilizer Recommendation
-![Fertilizer](screenshots/fertilizer.png)
+![Fertilizer](./assets/fertilizer.png)
 Get personalized fertilizer recommendations
 
 ### AI Chatbot
-![Chatbot](screenshots/chatbot.png)
+![Chatbot](./assets/chatbot.png)
 Interactive AI-powered farming assistant
 
 ## 🌟 Features
