@@ -1,11 +1,15 @@
-# Smart Agriculture System 🌱
+![dashboard](https://github.com/user-attachments/assets/c068fa6a-9bf2-4564-8c2a-e5bbdcd26923)# Smart Agriculture System 🌱
 
 A comprehensive smart agriculture solution that combines plant disease detection, fertilizer recommendations, and an AI-powered chatbot to assist farmers.
+
+### Deployment URLs
+- Frontend: https://smart-agri-farming-rbrw.vercel.app/
 
 ## 📸 Screenshots
 
 ### Main Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard]("C:\Users\thanu\Downloads\dashboard.png")
+
 Main dashboard showing all available features
 
 ### Plant Disease Detection
@@ -46,6 +50,7 @@ Interactive AI-powered farming assistant
 ### Prerequisites
 - Node.js (v14 or higher)
 - Python 3.9
+- Ollama (for TinyLlama)
 - Git
 
 ### Installation
@@ -84,6 +89,24 @@ Interactive AI-powered farming assistant
    python app.py
    
 
+6. *TinyLlama Setup and Run*
+   bash
+   # Install Ollama (if not already installed)
+   # For Windows:
+   winget install ollama
+   # For MacOS:
+   curl https://ollama.ai/install.sh | sh
+   # For Linux:
+   curl https://ollama.ai/install.sh | sh
+
+   # Start Ollama service
+   ollama serve
+
+   # In a new terminal, pull and run TinyLlama
+   ollama pull tinyllama
+   ollama run tinyllama
+   
+
 ### Environment Variables
 
 Create .env files in respective directories:
@@ -105,6 +128,12 @@ FRONTEND_URL=http://localhost:5173
 
 PORT=5001
 FRONTEND_URL=http://localhost:5173
+
+
+*Plant Disease Recognition (.env)*
+
+PORT=5002
+MODEL_PATH=models/plant_disease_recog_model_pwp.keras
 
 
 ## 📱 Usage
@@ -131,39 +160,22 @@ The project is deployed on:
 - Frontend: Vercel
 - Backend Services: Render
 
-### Deployment URLs
-- Frontend: https://smart-agri-farming-rbrw.vercel.app/
-- Backend: https://smart-agri-backend.onrender.com
-- Chatbot: https://smart-agri-chatbot.onrender.com
-- Plant Disease: https://smart-agri-plant-disease.onrender.com
-
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+
 ## 👥 Authors
 
-- Thanuja Nanjappa - Initial work
+- Pavithra Revankar - Initial work
+
 
 ## 🙏 Acknowledgments
 
 - TinyLlama for the chatbot capabilities
 - Plant disease detection model contributors
 - All open-source libraries used in this project
-
-
-## 🔄 Updates
-
-- Latest update: March 2024
-- Added new features:
-  - TinyLlama integration for improved chatbot responses
-  - Enhanced plant disease detection accuracy
-  - Mobile-responsive UI improvements
-- Fixed bugs:
-  - CORS issues in backend services
-  - Image upload optimization
-  - Chatbot response latency
 
 
 ## 📚 API Documentation
@@ -219,28 +231,7 @@ Content-Type: application/json
 
 
 Response:
-json
+```json
 {
   "response": "string"
 }
-
-
-## 🗺 Project Roadmap
-
-### Phase 1 - Current Features ✅
-- [x] Plant disease detection
-- [x] Fertilizer recommendations
-- [x] AI chatbot integration
-- [x] Basic user interface
-
-### Phase 2 - Coming Soon 🚀
-- [ ] Weather integration
-- [ ] Crop yield prediction
-- [ ] Soil moisture monitoring
-- [ ] Mobile app development
-
-### Phase 3 - Future Enhancements 🔮
-- [ ] IoT device integration
-- [ ] Advanced analytics dashboard
-- [ ] Multi-language support
-- [ ] Offline mode
