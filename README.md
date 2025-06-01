@@ -66,8 +66,8 @@ Interactive AI-powered farming assistant
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/smart-agriculture.git
-cd smart-agriculture
+git clone https://github.com/yourusername/farmzilla.git
+cd farmzilla
 ```
 
 2. **Frontend Setup**
