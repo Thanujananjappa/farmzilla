@@ -1,164 +1,185 @@
-![dashboard](https://github.com/user-attachments/assets/c068fa6a-9bf2-4564-8c2a-e5bbdcd26923)# Smart Agriculture System 🌱
+
+# Smart Agriculture System 🌱
 
 A comprehensive smart agriculture solution that combines plant disease detection, fertilizer recommendations, and an AI-powered chatbot to assist farmers.
 
 ### Deployment URLs
-- Frontend: https://smart-agri-farming-rbrw.vercel.app/
+
+* Frontend: [https://smart-agri-farming-rbrw.vercel.app/](https://smart-agri-farming-rbrw.vercel.app/)
 
 ## 📸 Screenshots
 
 ### Main Dashboard
-![Dashboard](./src/assets/dashboard.png)
 
+![Dashboard](./src/assets/dashboard.png)
 Main dashboard showing all available features
 
 ### Plant Disease Detection
+
 ![Plant Disease](./src/assets/disease.png)
 Upload and analyze plant images for disease detection
 
 ### Fertilizer Recommendation
+
 ![Fertilizer](./src/assets/fertilizer.png)
 Get personalized fertilizer recommendations
 
 ### AI Chatbot
+
 ![Chatbot](./src/assets/chatbot.png)
 Interactive AI-powered farming assistant
 
 ## 🌟 Features
 
-- *Plant Disease Detection*: Identify plant diseases using advanced image recognition
-- *Fertilizer Recommendation*: Get personalized fertilizer suggestions based on crop type, soil type, and NPK values
-- *AI Chatbot Assistant*: Interactive chatbot powered by TinyLlama to answer farming-related queries
-- *Modern UI*: Responsive and user-friendly interface built with React and Tailwind CSS
+* **Plant Disease Detection**: Identify plant diseases using advanced image recognition
+* **Fertilizer Recommendation**: Get personalized fertilizer suggestions based on crop type, soil type, and NPK values
+* **AI Chatbot Assistant**: Interactive chatbot powered by TinyLlama to answer farming-related queries
+* **Modern UI**: Responsive and user-friendly interface built with React and Tailwind CSS
 
 ## 🛠 Tech Stack
 
 ### Frontend
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Axios for API calls
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Axios for API calls
 
 ### Backend Services
-- *Main Backend*: Node.js with Express
-- *Chatbot Backend*: Node.js with TinyLlama integration
-- *Plant Disease Recognition*: Python with ML models
+
+* **Main Backend**: Node.js with Express
+* **Chatbot Backend**: Node.js with TinyLlama integration
+* **Plant Disease Recognition**: Python with ML models
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- Python 3.9
-- Ollama (for TinyLlama)
-- Git
+
+* Node.js (v14 or higher)
+* Python 3.9
+* Ollama (for TinyLlama)
+* Git
 
 ### Installation
 
-1. *Clone the repository*
-   bash
-   git clone https://github.com/yourusername/smart-agriculture.git
-   cd smart-agriculture
-   
+1. **Clone the repository**
 
-2. *Frontend Setup*
-   bash
-   cd frontend
-   npm install
-   npm run dev
-   
+```bash
+git clone https://github.com/yourusername/farmzilla.git
+cd farmzilla
+```
 
-3. *Backend Setup*
-   bash
-   cd backend
-   npm install
-   npm start
-   
+2. **Frontend Setup**
 
-4. *Chatbot Backend Setup*
-   bash
-   cd chatbot-backend/smart-agri-backend
-   npm install
-   npm start
-   
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-5. *Plant Disease Recognition Setup*
-   bash
-   cd Plant-Disease-Recognition-System
-   pip install -r requirements.txt
-   python app.py
-   
+3. **Backend Setup**
 
-6. *TinyLlama Setup and Run*
-   bash
-   # Install Ollama (if not already installed)
-   # For Windows:
-   winget install ollama
-   # For MacOS:
-   curl https://ollama.ai/install.sh | sh
-   # For Linux:
-   curl https://ollama.ai/install.sh | sh
+```bash
+cd backend
+npm install
+npm start
+```
 
-   # Start Ollama service
-   ollama serve
+4. **Chatbot Backend Setup**
 
-   # In a new terminal, pull and run TinyLlama
-   ollama pull tinyllama
-   ollama run tinyllama
-   
+```bash
+cd chatbot-backend/smart-agri-backend
+npm install
+npm start
+```
+
+5. **Plant Disease Recognition Setup**
+
+```bash
+cd Plant-Disease-Recognition-System
+pip install -r requirements.txt
+python app.py
+```
+
+6. **TinyLlama Setup and Run**
+
+```bash
+# Install Ollama (if not already installed)
+# For Windows:
+winget install ollama
+
+# For MacOS and Linux:
+curl https://ollama.ai/install.sh | sh
+
+# Start Ollama service
+ollama serve
+
+# In a new terminal, pull and run TinyLlama
+ollama pull tinyllama
+ollama run tinyllama
+```
 
 ### Environment Variables
 
-Create .env files in respective directories:
+Create `.env` files in respective directories:
 
-*Frontend (.env)*
+**Frontend (.env)**
 
+```env
 VITE_API_URL=http://localhost:5000
 VITE_CHATBOT_URL=http://localhost:5001
 VITE_PLANT_DISEASE_URL=http://localhost:5002
+```
 
+**Backend (.env)**
 
-*Backend (.env)*
-
+```env
 PORT=5000
 FRONTEND_URL=http://localhost:5173
+```
 
+**Chatbot Backend (.env)**
 
-*Chatbot Backend (.env)*
-
+```env
 PORT=5001
 FRONTEND_URL=http://localhost:5173
+```
 
+**Plant Disease Recognition (.env)**
 
-*Plant Disease Recognition (.env)*
-
+```env
 PORT=5002
 MODEL_PATH=models/plant_disease_recog_model_pwp.keras
-
+```
 
 ## 📱 Usage
 
-1. *Plant Disease Detection*
-   - Navigate to the Plant Disease page
-   - Upload an image of the plant
-   - Get instant disease detection results
+1. **Plant Disease Detection**
 
-2. *Fertilizer Recommendation*
-   - Select crop type
-   - Enter soil type
-   - Input NPK values
-   - Get personalized fertilizer recommendations
+   * Navigate to the Plant Disease page
+   * Upload an image of the plant
+   * Get instant disease detection results
 
-3. *AI Chatbot*
-   - Click on the chat icon
-   - Ask any farming-related questions
-   - Get instant AI-powered responses
+2. **Fertilizer Recommendation**
+
+   * Select crop type
+   * Enter soil type
+   * Input NPK values
+   * Get personalized fertilizer recommendations
+
+3. **AI Chatbot**
+
+   * Click on the chat icon
+   * Ask any farming-related questions
+   * Get instant AI-powered responses
 
 ## 🌐 Deployment
 
 The project is deployed on:
-- Frontend: Vercel
-- Backend Services: Render
+
+* Frontend: Vercel
+* Backend Services: Render
 
 
 ## 📝 License
@@ -168,22 +189,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- Pavithra Revankar - Initial work
-
+* Pavithra Revankar - Initial work
 
 ## 🙏 Acknowledgments
 
-- TinyLlama for the chatbot capabilities
-- Plant disease detection model contributors
-- All open-source libraries used in this project
-
+* TinyLlama for the chatbot capabilities
+* Plant disease detection model contributors
+* All open-source libraries used in this project
 
 ## 📚 API Documentation
 
 ### Backend API Endpoints
 
 #### Fertilizer Recommendation
-http
+
+```http
 POST /api/recommend-fertilizer
 Content-Type: application/json
 
@@ -194,44 +214,50 @@ Content-Type: application/json
   "phosphorus": number,
   "potassium": number
 }
+```
 
+**Response:**
 
-Response:
-json
+```json
 {
   "fertilizer": "string"
 }
-
+```
 
 #### Plant Disease Detection
-http
+
+```http
 POST /api/detect-disease
 Content-Type: multipart/form-data
 
 file: image
+```
 
+**Response:**
 
-Response:
-json
+```json
 {
   "disease": "string",
   "confidence": number,
   "recommendations": ["string"]
 }
-
+```
 
 #### Chatbot
-http
+
+```http
 POST /api/chat
 Content-Type: application/json
 
 {
   "message": "string"
 }
+```
 
+**Response:**
 
-Response:
 ```json
 {
   "response": "string"
 }
+```
