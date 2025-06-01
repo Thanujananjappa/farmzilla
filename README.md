@@ -8,7 +8,7 @@ A comprehensive smart agriculture solution that combines plant disease detection
 ## 📸 Screenshots
 
 ### Main Dashboard
-![Dashboard]("C:\Users\thanu\Downloads\dashboard.png")
+![Dashboard]("./assets/dashboard.png)")
 
 Main dashboard showing all available features
 
